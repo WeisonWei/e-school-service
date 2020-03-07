@@ -18,20 +18,6 @@
 
     <modules>
         <module>e-school-service-base</module>
-        <module>e-school-service-student</module>
-        <module>e-school-service-score</module>
-        <module>e-school-service-ribbon</module>
-        <module>e-school-service-feign</module>
-        <module>e-school-service-zuul</module>
-        <module>e-school-service-es</module>
-        <module>e-school-service-user</module>
-        <module>e-school-service-payment</module>
-        <module>e-school-service-product</module>
-        <module>e-school-service-sales</module>
-        <module>e-school-service-order</module>
-        <module>e-school-service-account</module>
-        <module>e-school-service-api</module>
-        <module>e-school-service-task</module>
     </modules>
 
     <profiles>
