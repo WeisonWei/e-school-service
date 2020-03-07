@@ -1,0 +1,77 @@
+<settings>
+    <mirrors>
+        <mirror>
+            <id>local-nexus-repo</id>
+            <name>local nexus repo</name>
+            <url>http://localhost:9081/repository/maven-public/</url>
+            <mirrorOf>*</mirrorOf>
+        </mirror>
+        <mirror>
+            <id>aliyun-nexus-repo</id>
+            <name>aliyun nexus repo</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+    </mirrors>
+
+    <profiles>
+        <profile>
+            <id>local-nexus-repo</id>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>http://central</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <url>http://central</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+            <properties>
+                <releases.id>local-nexus-repo-releases</releases.id>
+                <releases.name>local nexus repo releases</releases.name>
+                <releases.url>http://localhost:9081/repository/maven-releases/</releases.url>
+                <snapshots.id>local-nexus-repo-snapshots</snapshots.id>
+                <snapshots.name>local nexus repo snapshots</snapshots.name>
+                <snapshots.url>http://localhost:9081/repository/maven-snapshots/</snapshots.url>
+            </properties>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>local-nexus-repo</activeProfile>
+    </activeProfiles>
+
+    <servers>
+        <server>
+            <id>local-nexus-repo</id>
+            <username>admin</username>
+            <password>admin</password>
+        </server>
+        <server>
+            <id>local-nexus-repo-releases</id>
+            <username>admin</username>
+            <password>admin</password>
+        </server>
+        <server>
+            <id>local-nexus-repo-snapshots</id>
+            <username>admin</username>
+            <password>admin</password>
+        </server>
+    </servers>
+
+</settings>
