@@ -18,6 +18,7 @@
 
     <modules>
         <module>e-school-service-base</module>
+        <module>e-school-service-account</module>
     </modules>
 
     <profiles>
