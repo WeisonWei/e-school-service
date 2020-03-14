@@ -1,0 +1,77 @@
+version: "3.7"
+services:
+  school-service-eureka:
+    hostname: discovery
+    image: ${E_SCHOOL_SERVICE_REGISTRY}/cloud-eureka:${E_SCHOOL_SERVICE_VERSION}
+    env_file:
+      - ../env/environment.env
+      - ../env/environment-${E_SCHOOL_SERVICE_ENV}.env
+    ports:
+      - 8761:8761
+    networks:
+      - school-service-compose-net
+    restart: unless-stopped
+
+  school-service-student:
+    image: ${E_SCHOOL_SERVICE_REGISTRY}/school-service-student:${E_SCHOOL_SERVICE_VERSION}
+    env_file:
+      - ../env/environment.env
+      - ../env/environment-${E_SCHOOL_SERVICE_ENV}.env
+    ports:
+      - 8080:8080
+    networks:
+      - school-service-compose-net
+    depends_on:
+      - school-service-eureka
+    restart: unless-stopped
+    links:
+      - school-service-eureka:discovery
+
+  school-service-ribbon:
+    image: ${E_SCHOOL_SERVICE_REGISTRY}/school-service-ribbon:${E_SCHOOL_SERVICE_VERSION}
+    env_file:
+      - ../env/environment.env
+      - ../env/environment-${E_SCHOOL_SERVICE_ENV}.env
+    ports:
+      - 8082:8082
+    networks:
+      - school-service-compose-net
+    depends_on:
+      - school-service-eureka
+    restart: unless-stopped
+    links:
+      - school-service-eureka:discovery
+
+  school-service-feign:
+    image: ${E_SCHOOL_SERVICE_REGISTRY}/school-service-feign:${E_SCHOOL_SERVICE_VERSION}
+    env_file:
+      - ../env/environment.env
+      - ../env/environment-${E_SCHOOL_SERVICE_ENV}.env
+    ports:
+      - 8083:8083
+    networks:
+      - school-service-compose-net
+    depends_on:
+      - school-service-eureka
+    restart: unless-stopped
+    links:
+      - school-service-eureka:discovery
+
+  school-service-zuul:
+    image: ${E_SCHOOL_SERVICE_REGISTRY}/school-service-zuul:${E_SCHOOL_SERVICE_VERSION}
+    env_file:
+      - ../env/environment.env
+      - ../env/environment-${E_SCHOOL_SERVICE_ENV}.env
+    ports:
+      - 8085:8085
+    networks:
+      - school-service-compose-net
+    depends_on:
+      - school-service-eureka
+    restart: unless-stopped
+    links:
+      - school-service-eureka:discovery
+
+
+networks:
+  school-service-compose-net:

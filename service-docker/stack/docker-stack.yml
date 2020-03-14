@@ -1,0 +1,48 @@
+version: "3.7"
+services:
+  school-service-eureka:
+    hostname: discovery
+    image: localhost:5000/cloud-eureka:0.0.1-SNAPSHOT
+    ports:
+      - 8761:8761
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "1"
+          memory: 256M
+    networks:
+      - school-service-stack-net
+
+  school-service-student:
+    image: localhost:5000/school-service-student:0.0.1-SNAPSHOT
+    ports:
+      - 8080:8080
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "1"
+          memory: 256M
+    networks:
+      - school-service-stack-net
+    depends_on:
+      - school-service-eureka
+
+  school-service-ribbon:
+    image: localhost:5000/school-service-ribbon:0.0.1-SNAPSHOT
+    ports:
+      - 8082:8082
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "1"
+          memory: 256M
+    networks:
+      - school-service-stack-net
+    depends_on:
+      - school-service-eureka
+
+networks:
+  school-service-stack-net:
