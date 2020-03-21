@@ -4,3 +4,6 @@
 [submodule "e-school-service-account"]
 	path = e-school-service-account
 	url = https://github.com/WeisonWei/e-school-service-account.git
+[submodule "e-school-service-user"]
+	path = e-school-service-user
+	url = https://github.com/WeisonWei/e-school-service-user.git
