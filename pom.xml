@@ -20,6 +20,7 @@
         <module>e-school-service-base</module>
         <module>e-school-service-user</module>
         <module>e-school-service-account</module>
+        <module>e-school-service-gateway</module>
     </modules>
 
     <profiles>

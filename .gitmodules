@@ -7,3 +7,6 @@
 [submodule "e-school-service-user"]
 	path = e-school-service-user
 	url = https://github.com/WeisonWei/e-school-service-user.git
+[submodule "e-school-service-gateway"]
+	path = e-school-service-gateway
+	url = https://github.com/WeisonWei/e-school-service-gateway.git
