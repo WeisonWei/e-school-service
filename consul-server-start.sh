@@ -1,4 +1,5 @@
 #!/bin/bash
+P=`pwd`
 cd /usr/local/bin/
 /Applications/Firefox.app/Contents/MacOS/firefox http://localhost:8500/ui
 # 获取服务列表
@@ -8,4 +9,4 @@ cd /usr/local/bin/
 # 手动注销服务
 #curl -X PUT http://localhost:8500/v1/agent/service/deregister/my-service-id
 # 启动服务端开发者模式
-consul agent -dev
+nohup consul agent -dev > ${P}/nohub.out 2>&1 &
