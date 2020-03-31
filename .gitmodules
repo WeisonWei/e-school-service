@@ -25,3 +25,6 @@
 [submodule "e-school-service-admin"]
 	path = e-school-service-admin
 	url = https://github.com/WeisonWei/e-school-service-admin.git
+[submodule "e-school-service-task"]
+	path = e-school-service-task
+	url = https://github.com/WeisonWei/e-school-service-task.git

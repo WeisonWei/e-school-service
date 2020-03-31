@@ -26,6 +26,7 @@
         <module>e-school-service-discovery</module>
         <module>e-school-service-config</module>
         <module>e-school-service-admin</module>
+        <module>e-school-service-task</module>
     </modules>
 
     <profiles>
