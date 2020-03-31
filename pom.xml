@@ -24,6 +24,7 @@
         <module>e-school-service-api</module>
         <module>e-school-service-feign</module>
         <module>e-school-service-discovery</module>
+        <module>e-school-service-config</module>
     </modules>
 
     <profiles>

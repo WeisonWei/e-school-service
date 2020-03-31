@@ -19,3 +19,6 @@
 [submodule "e-school-service-discovery"]
 	path = e-school-service-discovery
 	url = https://github.com/WeisonWei/e-school-service-discovery.git
+[submodule "e-school-service-config"]
+	path = e-school-service-config
+	url = https://github.com/WeisonWei/e-school-service-config.git
