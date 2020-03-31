@@ -22,6 +22,7 @@
         <module>e-school-service-account</module>
         <module>e-school-service-gateway</module>
         <module>e-school-service-api</module>
+        <module>e-school-service-feign</module>
     </modules>
 
     <profiles>
