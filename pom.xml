@@ -23,6 +23,7 @@
         <module>e-school-service-gateway</module>
         <module>e-school-service-api</module>
         <module>e-school-service-feign</module>
+        <module>e-school-service-discovery</module>
     </modules>
 
     <profiles>

@@ -16,3 +16,6 @@
 [submodule "e-school-service-feign"]
 	path = e-school-service-feign
 	url = https://github.com/WeisonWei/e-school-service-feign.git
+[submodule "e-school-service-discovery"]
+	path = e-school-service-discovery
+	url = https://github.com/WeisonWei/e-school-service-discovery.git

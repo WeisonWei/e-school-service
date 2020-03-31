@@ -15,6 +15,7 @@ git submodule add https://github.com/WeisonWei/e-school-service-base.git
 git submodule add https://github.com/WeisonWei/e-school-service-task.git
 git submodule add https://github.com/WeisonWei/e-school-service-gateway.git
 git submodule add https://github.com/WeisonWei/e-school-service-feign.git
+git submodule add https://github.com/WeisonWei/e-school-service-discovery.git
 #submodule add 执行完后执行
 #git submodule init
 #git submodule update
