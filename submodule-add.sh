@@ -5,7 +5,7 @@ git submodule add https://github.com/WeisonWei/e-school-service-score.git
 git submodule add https://github.com/WeisonWei/e-school-service-feign.git
 git submodule add https://github.com/WeisonWei/e-school-service-ribbon.git
 git submodule add https://github.com/WeisonWei/e-school-service-zuul.git
-git submodule add https://github.com/WeisonWei/e-school-service-es.git
+git submodule add https://github.com/WeisonWei/e-school-service-repository.git
 git submodule add https://github.com/WeisonWei/e-school-service-product.git
 git submodule add https://github.com/WeisonWei/e-school-service-sales.git
 git submodule add https://github.com/WeisonWei/e-school-service-order.git

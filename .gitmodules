@@ -28,3 +28,6 @@
 [submodule "e-school-service-task"]
 	path = e-school-service-task
 	url = https://github.com/WeisonWei/e-school-service-task.git
+[submodule "e-school-service-repository"]
+	path = e-school-service-repository
+	url = https://github.com/WeisonWei/e-school-service-repository.git

@@ -27,6 +27,7 @@
         <module>e-school-service-config</module>
         <module>e-school-service-admin</module>
         <module>e-school-service-task</module>
+        <module>e-school-service-repository</module>
     </modules>
 
     <profiles>
